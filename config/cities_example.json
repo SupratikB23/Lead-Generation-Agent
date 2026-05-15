@@ -1,0 +1,87 @@
+{
+  "_instructions": "Copy this file to cities.json and fill in your target cities and zones. Remove this _instructions key before running.",
+
+  "hyderabad": {
+    "name": "Hyderabad",
+    "state": "Telangana",
+    "country": "India",
+    "zones": [
+      "Banjara Hills", "Jubilee Hills", "Hitech City", "Gachibowli",
+      "Madhapur", "Kondapur", "Kukatpally", "Secunderabad"
+    ],
+    "coordinates": {
+      "lat": 17.3850,
+      "lng": 78.4867
+    }
+  },
+
+  "mumbai": {
+    "name": "Mumbai",
+    "state": "Maharashtra",
+    "country": "India",
+    "zones": [
+      "Bandra", "Andheri", "Powai", "Lower Parel",
+      "Juhu", "Malad", "Borivali", "Thane"
+    ],
+    "coordinates": {
+      "lat": 19.0760,
+      "lng": 72.8777
+    }
+  },
+
+  "bangalore": {
+    "name": "Bangalore",
+    "state": "Karnataka",
+    "country": "India",
+    "zones": [
+      "Koramangala", "Indiranagar", "Whitefield", "HSR Layout",
+      "Jayanagar", "Marathahalli", "Electronic City", "Yelahanka"
+    ],
+    "coordinates": {
+      "lat": 12.9716,
+      "lng": 77.5946
+    }
+  },
+
+  "delhi": {
+    "name": "Delhi",
+    "state": "Delhi",
+    "country": "India",
+    "zones": [
+      "Connaught Place", "South Extension", "Lajpat Nagar", "Dwarka",
+      "Rohini", "Karol Bagh", "Saket", "Vasant Kunj"
+    ],
+    "coordinates": {
+      "lat": 28.6139,
+      "lng": 77.2090
+    }
+  },
+
+  "new_york": {
+    "name": "New York",
+    "state": "New York",
+    "country": "USA",
+    "zones": [
+      "Manhattan", "Brooklyn", "Queens", "Bronx",
+      "Staten Island", "Midtown", "Upper East Side", "Williamsburg"
+    ],
+    "coordinates": {
+      "lat": 40.7128,
+      "lng": -74.0060
+    }
+  },
+
+  "london": {
+    "name": "London",
+    "state": "England",
+    "country": "UK",
+    "zones": [
+      "Central London", "Canary Wharf", "Shoreditch", "Chelsea",
+      "Hackney", "Islington", "Southwark", "Kensington"
+    ],
+    "coordinates": {
+      "lat": 51.5074,
+      "lng": -0.1278
+    }
+  }
+}

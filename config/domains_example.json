@@ -1,0 +1,167 @@
+{
+  "_instructions": "Copy this file to domains.json and keep only the domains you want to scrape. Remove this _instructions key before running. The {city} placeholder in search_queries is automatically replaced with '{zone}, {city_name}' at runtime.",
+
+  "dental_clinics": {
+    "name": "Dental Clinics",
+    "search_queries": [
+      "dental clinics in {city}",
+      "dentists in {city}",
+      "orthodontists in {city}",
+      "dental hospitals in {city}"
+    ],
+    "fields": ["business_name", "type", "address", "phone", "website",
+               "rating", "review_count", "hours", "services", "email",
+               "revenue_estimate", "team_size", "city", "zone",
+               "creation_date", "data_source"]
+  },
+
+  "dermatology_clinics": {
+    "name": "Dermatology Clinics",
+    "search_queries": [
+      "dermatology clinics in {city}",
+      "skin doctors in {city}",
+      "cosmetologists in {city}",
+      "dermatologists in {city}"
+    ],
+    "fields": ["business_name", "type", "address", "phone", "website",
+               "rating", "review_count", "hours", "services", "email",
+               "revenue_estimate", "team_size", "city", "zone",
+               "creation_date", "data_source"]
+  },
+
+  "real_estate": {
+    "name": "Real Estate",
+    "search_queries": [
+      "real estate agents in {city}",
+      "property dealers in {city}",
+      "real estate companies in {city}",
+      "builders in {city}",
+      "property consultants in {city}"
+    ],
+    "fields": ["business_name", "type", "address", "phone", "website",
+               "rating", "review_count", "hours", "services", "email",
+               "revenue_estimate", "team_size", "city", "zone",
+               "creation_date", "data_source"]
+  },
+
+  "interiors_architects": {
+    "name": "Interiors & Architects",
+    "search_queries": [
+      "interior designers in {city}",
+      "architects in {city}",
+      "interior decorators in {city}",
+      "architecture firms in {city}",
+      "home designers in {city}"
+    ],
+    "fields": ["business_name", "type", "address", "phone", "website",
+               "rating", "review_count", "hours", "services", "email",
+               "revenue_estimate", "team_size", "city", "zone",
+               "creation_date", "data_source"]
+  },
+
+  "restaurants": {
+    "name": "Restaurants",
+    "search_queries": [
+      "restaurants in {city}",
+      "cafes in {city}",
+      "fine dining in {city}",
+      "food delivery restaurants in {city}"
+    ],
+    "fields": ["business_name", "type", "address", "phone", "website",
+               "rating", "review_count", "hours", "email",
+               "city", "zone", "creation_date", "data_source"]
+  },
+
+  "gyms_fitness": {
+    "name": "Gyms & Fitness",
+    "search_queries": [
+      "gyms in {city}",
+      "fitness centres in {city}",
+      "CrossFit in {city}",
+      "yoga studios in {city}",
+      "personal trainers in {city}"
+    ],
+    "fields": ["business_name", "type", "address", "phone", "website",
+               "rating", "review_count", "email",
+               "city", "zone", "creation_date", "data_source"]
+  },
+
+  "hospitals_clinics": {
+    "name": "Hospitals & Clinics",
+    "search_queries": [
+      "hospitals in {city}",
+      "medical clinics in {city}",
+      "multispecialty hospitals in {city}",
+      "diagnostic centres in {city}"
+    ],
+    "fields": ["business_name", "type", "address", "phone", "website",
+               "rating", "review_count", "hours", "email",
+               "city", "zone", "creation_date", "data_source"]
+  },
+
+  "law_firms": {
+    "name": "Law Firms",
+    "search_queries": [
+      "law firms in {city}",
+      "lawyers in {city}",
+      "legal consultants in {city}",
+      "advocates in {city}"
+    ],
+    "fields": ["business_name", "type", "address", "phone", "website",
+               "rating", "review_count", "email",
+               "city", "zone", "creation_date", "data_source"]
+  },
+
+  "digital_marketing": {
+    "name": "Digital Marketing Agencies",
+    "search_queries": [
+      "digital marketing agencies in {city}",
+      "SEO companies in {city}",
+      "social media marketing in {city}",
+      "advertising agencies in {city}"
+    ],
+    "fields": ["business_name", "type", "address", "phone", "website",
+               "rating", "review_count", "email",
+               "revenue_estimate", "team_size",
+               "city", "zone", "creation_date", "data_source"]
+  },
+
+  "ca_accounting": {
+    "name": "CA & Accounting Firms",
+    "search_queries": [
+      "chartered accountants in {city}",
+      "CA firms in {city}",
+      "accounting firms in {city}",
+      "tax consultants in {city}"
+    ],
+    "fields": ["business_name", "type", "address", "phone", "website",
+               "rating", "review_count", "email",
+               "city", "zone", "creation_date", "data_source"]
+  },
+
+  "wedding_planners": {
+    "name": "Wedding Planners",
+    "search_queries": [
+      "wedding planners in {city}",
+      "event management companies in {city}",
+      "wedding decorators in {city}",
+      "banquet halls in {city}"
+    ],
+    "fields": ["business_name", "type", "address", "phone", "website",
+               "rating", "review_count", "email",
+               "city", "zone", "creation_date", "data_source"]
+  },
+
+  "schools_coaching": {
+    "name": "Schools & Coaching",
+    "search_queries": [
+      "schools in {city}",
+      "coaching institutes in {city}",
+      "tutoring centres in {city}",
+      "CBSE schools in {city}"
+    ],
+    "fields": ["business_name", "type", "address", "phone", "website",
+               "rating", "review_count", "email",
+               "city", "zone", "creation_date", "data_source"]
+  }
+}
