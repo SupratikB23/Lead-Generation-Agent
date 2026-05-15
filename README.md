@@ -18,20 +18,20 @@ A free, local, browser-automation tool that scrapes business leads from Google M
 
 ## Overview
 
-This tool automates the collection of business lead data from Google Maps for the following domains:
+This tool automates the collection of business lead data from Google Maps for **any city** and **any business domain** you define. You configure your target cities, neighbourhoods, and business categories through simple JSON files — no code changes required.
 
-| Domain | What it scrapes |
-|---|---|
-| **Dental Clinics** | Dentists, orthodontists, dental hospitals |
-| **Dermatology Clinics** | Skin doctors, cosmetologists, dermatologists |
-| **Real Estate** | Agents, property dealers, builders, consultants |
-| **Interiors & Architects** | Interior designers, architects, decoration firms |
+**Example domains you can scrape:**
+Dental Clinics · Dermatology · Real Estate · Interior Designers · Restaurants · Gyms · Law Firms · Digital Marketing Agencies · Hospitals · Schools · CA Firms · Wedding Planners — or anything else on Google Maps.
+
+**Example cities:**
+Hyderabad · Mumbai · Bangalore · Delhi · New York · London — any city with a Google Maps presence works.
 
 For each business it captures: name, category, phone, email, website, address, rating, review count, revenue estimate, team size, and more.
 
 **Key features:**
 - 100% free — no API keys, no paid services
-- Zone-by-zone scraping across 15 key areas of Hyderabad (configurable)
+- Fully configurable — any city, any zone, any business domain via JSON
+- Zone-by-zone scraping for complete coverage (Google Maps caps results per search)
 - Auto-resume — if stopped midway, re-running picks up from the last completed zone
 - Per-domain Excel export as each domain finishes, plus a combined Excel at the end
 - Website enrichment — extracts emails and estimates revenue from business websites
@@ -95,6 +95,56 @@ playwright install chromium
 
 ## Running the Project
 
+### Step 1 — Set up your config files
+
+The repo ships with example config files. Copy them and edit to match your targets:
+
+```bash
+cp config/cities_example.json config/cities.json
+cp config/domains_example.json config/domains.json
+```
+
+> `cities.json` and `domains.json` are gitignored — they stay local to your machine.
+
+**Edit `config/cities.json`** — add the city and zones you want to scrape:
+
+```json
+{
+  "mumbai": {
+    "name": "Mumbai",
+    "state": "Maharashtra",
+    "country": "India",
+    "zones": ["Bandra", "Andheri", "Powai", "Lower Parel"]
+  }
+}
+```
+
+**Edit `config/domains.json`** — keep only the domains you need, or add new ones:
+
+```json
+{
+  "restaurants": {
+    "name": "Restaurants",
+    "search_queries": [
+      "restaurants in {city}",
+      "cafes in {city}"
+    ]
+  }
+}
+```
+
+The `{city}` placeholder is automatically replaced with `"{zone}, {city_name}"` at runtime (e.g. `"Bandra, Mumbai"`).
+
+### Step 2 — Set your target city in `run.py`
+
+Open `run.py` and set `city_key` on line 62 to match a key in your `cities.json`:
+
+```python
+city_key = 'mumbai'   # must match a key in config/cities.json
+```
+
+### Step 3 — Run
+
 ```bash
 python run.py
 ```
@@ -102,7 +152,7 @@ python run.py
 The script will:
 
 1. Check `output/backups/` for any previously completed zones
-2. Skip zones that are already backed up and load them from cache
+2. Skip zones already backed up and load them from cache
 3. Open a Chrome browser and scrape any remaining zones
 4. After each zone completes, save a JSON backup immediately
 5. After all zones for a domain finish, export a per-domain Excel file
@@ -110,15 +160,14 @@ The script will:
 
 **To stop and resume later:** Press `Ctrl+C` at any time. All completed zones are saved. Re-run `python run.py` to continue from where it stopped.
 
-### Configuration
+### Optional tuning
 
-| File | What to change |
-|---|---|
-| `config/cities.json` | Add cities or change which zones are scraped |
-| `config/domains.json` | Add new business domains and search queries |
-| `run.py` line 56 | `headless=False` → `headless=True` to run without a visible browser (faster) |
-| `run.py` line 56 | `delay_range=(2, 4)` → `(1, 2)` to scrape faster (higher bot-detection risk) |
-| `run.py` line 62 | `city_key = 'hyderabad'` → change to another city key |
+| Setting | Location | Description |
+|---|---|---|
+| `headless=False` → `True` | `run.py` line 56 | Hide the browser window — runs faster |
+| `delay_range=(2, 4)` → `(1, 2)` | `run.py` line 56 | Faster scraping (higher bot-detection risk) |
+| Zones list | `config/cities.json` | Reduce zones to scrape fewer areas |
+| Search queries | `config/domains.json` | Add or remove queries per domain |
 
 ---
 
