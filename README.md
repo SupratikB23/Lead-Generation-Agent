@@ -1,4 +1,4 @@
-# Local Leads Extractor
+# Lead Generation Agent
 
 A free, local, browser-automation tool that scrapes business leads from Google Maps across multiple domains and cities, and exports them into clean, formatted Excel files — with full resume support if the run is interrupted.
 
@@ -119,7 +119,7 @@ cp config/domains_example.json config/domains.json
 }
 ```
 
-**Edit `config/domains.json`** — keep only the domains you need, or add new ones:
+**Edit `config/domains.json`** - keep only the domains you need, or add new ones:
 
 ```json
 {
