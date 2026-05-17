@@ -20,10 +20,10 @@ A free, local, browser-automation tool that scrapes business leads from Google M
 
 This tool automates the collection of business lead data from Google Maps for **any city** and **any business domain** you define. You configure your target cities, neighbourhoods, and business categories through simple JSON files — no code changes required.
 
-**Example domains you can scrape:**
+**Example domains you can scrape:**<br>
 Dental Clinics · Dermatology · Real Estate · Interior Designers · Restaurants · Gyms · Law Firms · Digital Marketing Agencies · Hospitals · Schools · CA Firms · Wedding Planners — or anything else on Google Maps.
 
-**Example cities:**
+**Example cities:**<br>
 Hyderabad · Mumbai · Bangalore · Delhi · New York · London — any city with a Google Maps presence works.
 
 For each business it captures: name, category, phone, email, website, address, rating, review count, revenue estimate, team size, and more.
